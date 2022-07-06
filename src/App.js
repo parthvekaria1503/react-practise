@@ -30,13 +30,13 @@ function App() {
       document.body.style.backgroundColor = "black";
       document.body.style.color = "white";
       showAlert("dark mode active", "success");
-      document.title = "TextUtils - Dark Mode";
+      // document.title = "TextUtils - Dark Mode";
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
       document.body.style.color = "black";
       showAlert("light mode active", "primary");
-      document.title = "TextUtils - Light Mode";
+      // document.title = "TextUtils - Light Mode";
     }
   };
 
@@ -47,7 +47,7 @@ function App() {
       <Alerts alert={alert} />  
       <div className="container">
         <Routes>
-          <Route exact path="/about" element={<About />}/>
+          <Route exact path="/about" element={<About mode={mode}/>}/>
           <Route exact path="/" element={<Textform showAlert={showAlert} heading="Enter the text" heading2="enter text"/>}/>
         </Routes>
       </div>
